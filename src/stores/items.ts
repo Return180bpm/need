@@ -18,8 +18,12 @@ export const useItemsStore = defineStore('items', () => {
   const sortedItems = computed(() => items.value.sort(sortObjectsABC('label')))
   const activeItems = computed(() => items.value.filter(item => item.isActive === true))
 
-  function add(item) {
-    items.value.push(item)
+  function add(label: string) {
+    items.value.push({
+      _id: 2,
+      label,
+      isActive: true,
+    })
   }
 
   return { items, sortedItems, activeItems, add }
