@@ -1,19 +1,13 @@
 <script setup lang="ts">
-const props = defineProps<{
-  initial: number
+const { label } = defineProps<{
+  label: string
 }>()
-
-const { count, inc, dec } = useCounter(props.initial)
 </script>
 
 <template>
-  <div>
-    {{ count }}
-    <button class="inc" @click="inc()">
-      +
-    </button>
-    <button class="dec" @click="dec()">
-      -
-    </button>
-  </div>
+  <li class="w-full rounded-full bg-teal-800 py-1 pl-1">
+    <div class="h-full w-4/6 truncate rounded-full bg-teal-200 px-8 py-4">
+      <span>{{ label }}</span>
+    </div>
+  </li>
 </template>
