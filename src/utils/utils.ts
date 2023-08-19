@@ -12,3 +12,9 @@ export function sortObjectsABC(key: string) {
     return 0
   }
 }
+
+export function sortObjectsNumber(key: string) {
+  return function (a: object, b: object) {
+    return a[key] - b[key]
+  }
+}

@@ -16,7 +16,7 @@ function onAddNewItem(label: string) {
       <input v-model="newItemLabel" type="text" placeholder="need" class="border-2 border-light-50 rounded-full bg-teal-200 px-4 py-4 focus:outline-green-400">
     </form>
     <ul class="grid w-full gap-1 rounded-3xl">
-      <TodoItem v-for="item in itemsStore.sortedItems" :key="item._id" :label="item.label" />
+      <TodoItem v-for="(item, index) in itemsStore.sortedItemsTime" :key="index" :label="item.label" />
     </ul>
   </div>
 </template>
