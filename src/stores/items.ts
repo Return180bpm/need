@@ -13,8 +13,10 @@ const INIT_ITEMS = [
     isActive: true,
   },
 ]
+const LOCAL_STORE_NAME = 'items'
+
 export const useItemsStore = defineStore('items', () => {
-  const items = ref(INIT_ITEMS)
+  const items = useStorage(LOCAL_STORE_NAME, INIT_ITEMS)
   const sortedItems = computed(() => items.value.sort(sortObjectsABC('label')))
   const activeItems = computed(() => items.value.filter(item => item.isActive === true))
 
