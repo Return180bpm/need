@@ -14,6 +14,7 @@
   "dependencies": {
     "@vueuse/core": "^10.1.2",
     "@vueuse/gesture": "2.0.0-beta.1",
+    "@vueuse/motion": "^2.0.0",
     "@xstate/vue": "^2.0.0",
     "pinia": "^2.1.6",
     "vue": "^3.3.4",
